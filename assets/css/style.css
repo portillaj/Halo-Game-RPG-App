@@ -1,0 +1,214 @@
+body {
+	background-image: url('../images/background-img.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	height: auto;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+.top-section {
+	max-width: 100%;
+	margin-left: 100px;
+}
+
+.select-header {
+	font-size: 40px;
+	color: white;
+	text-decoration: underline;
+	background-color: #23252A;
+	min-width: 22%;
+	display: inline;
+	padding: 10px;
+	border-radius: 5px;
+	margin-left: 120px;
+}
+
+.header {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.header h2 {
+	text-align: center;
+}
+.player-card {
+	background-color: #23252A; 
+	padding: 10px;
+	width: 20%;	
+	border-radius: 8px;
+	margin-left: 20px;
+}
+
+.character {
+	width: 100%;
+	height: 200px;
+	border-radius: 5px; 
+}
+
+.character-fight {
+	width: 80%;
+	height: 250px;
+	background-color: #23252A; 
+	padding: 10px;	
+	border-radius: 8px;
+}
+
+.enemy-side {
+	margin-left: 70px;
+}
+
+.battle-img {
+	background-color: #23252A; 
+	padding: 10px;
+	min-width: 70%;	
+	border-radius: 8px;
+}
+
+.character:hover {
+	border: 7px solid white;
+	transition-duration: .4s;
+}
+
+.rank, #characterHp {
+	margin-top: 9px;
+}
+
+#characterHp {
+	position: relative;
+	display: inline-block;
+	color: #020E35;
+	font-size: 18px;
+	margin-right: 70px;
+	padding: 12px;
+	margin-top: 5px;
+	min-width: 100%;
+	border-radius: 3px;
+	text-align: left;
+	background-color: white;
+}
+
+
+.rank {
+	position: absolute;
+	top: -10px;
+	right: 0;
+	padding: 6px;
+	background-color: #020E35;
+	min-width: 60px;
+	color: white;
+	border-radius: 3px;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 16px;
+	text-align: center;
+}
+
+.my-progress {
+	width: 100%;
+	margin-top: 5px;
+	height: 12px;
+	background-color: #F0F0F2;
+}
+
+.xp {
+	position: relative;
+	color: white;
+	min-width: 100%;
+	padding: 5px;
+	margin-top: -15px;
+	text-align: left;
+	background-color: #23252A;
+}
+
+.hp {
+	color: black;
+}
+
+.my-hp {
+	position: absolute;
+	top: 4px;
+	right: -10px;
+	min-width: 55px;
+
+}
+
+.fight-section {
+	margin-top: 30px;
+	margin-left: 120px;
+	height: auto;
+}
+
+.panel {
+	height: auto;
+}
+
+.panel-body {
+	margin-top: 15px; 
+}
+
+.battle { 
+	width: 90%;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	background-color: #020E35;
+	margin-top: 10px;
+}
+
+.description {
+	font-size: 24px;
+	color: black;
+}
+
+
+.stats {
+	margin-top: 30px;
+}
+
+.stats p {
+	margin-top: 10px;
+	margin-bottom: 20px;
+}
+
+.atk-button button {
+	display: block;
+	margin: 0 auto;
+}
+.my-panel {
+	background-color: #020E35;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.player-stats {
+	padding: 10px;
+	border-radius: 5px;
+	width: 80%;
+	text-align: center;
+	color: white;
+	text-align: left;
+}
+
+.stat-section {
+	width: 25%;
+	margin-right: -120px;
+}
+
+.icon {
+	margin-right: 10px;
+}
+
+#game-over {
+	font-size: 18px;
+	color: #B90000;
+}
+
+.restart-button {
+	margin-top: 20px;
+	margin-left: 110px;
+}
+
+
+
+
+
