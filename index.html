@@ -22,7 +22,7 @@
         <div class="row top-section">
         <div id="remove-me" class="col-md-3 col-lg-3 player-card">
             <img class="character" data-obj="masterChief" src="assets/images/master-chief.gif" alt="Master Chief character from Halo">
-              <h2 id="characterHp">Master Chief<span class="rank">20<p>CSR</p></span></h2>
+              <h2 id="characterHp">Master Chief<span class="rank">20<br>CSR</span></h2>
               <div class="progress my-progress ">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="masterChief" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
                 </div>
@@ -31,7 +31,7 @@
         </div>
         <div id="remove-me" class="col-md-3 col-lg-3 player-card">
             <img class="character" data-obj="sentinel" src="assets/images/sentinel.gif" alt="sentinel character from Halo">
-             <h2 id="characterHp">Sentinel<span class="rank">18<p>CSR</p></span></h2>
+             <h2 id="characterHp">Sentinel<span class="rank">18<br>CSR</span></h2>
               <div class="progress my-progress">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
                 </div>
@@ -40,7 +40,7 @@
         </div>
             <div id="remove-me" class="col-md-3 col-lg-3 player-card">
               <img class="character" data-obj="elite" src="assets/images/elite.gif" alt="elite character from Halo">
-              <h2 id="characterHp">Elite<span class="rank">13<p>CSR</p></span></h2>
+              <h2 id="characterHp">Elite<span class="rank">13<br>CSR</span></h2>
                <div class="progress my-progress ">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
                 </div>
@@ -50,7 +50,7 @@
             </div>
              <div id="remove-me" class="col-md-3 col-lg-3 player-card">
               <img class="character" data-obj="cortana" src="assets/images/cortana.gif" alt="cortana character from Halo">
-              <h2 id="characterHp">Cortana<span class="rank">10<p>CSR</p></span></h2>
+              <h2 id="characterHp">Cortana<span class="rank">10<br>CSR</span></h2>
                <div class="progress my-progress ">
                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
                 </div>
@@ -69,6 +69,8 @@
            <div class="panel-body">
               <div class="row">
                 <div class="col-md-12 col-lg-12 atk-button">
+                  <h2 class="visible">You attacked for: <span class="display"></span></h2>
+                  <h2 class="visible">Enemy attacked for: <span class="display2"></span></h2>
                   <button class="btn btn-lg btn-danger attack">ATTACK!</button>
                 </div>
               </div><!--END ROW-->
@@ -93,7 +95,7 @@
                 <h2 class="win-message">
                   
                 </h2>
-                <h2 class="gameOver-message">
+                <h2 class="gameOver-message"></h2>
                   
                 </h2>
               </div><!--END ROW-->
@@ -117,9 +119,7 @@
                 </div>
               </div>
                <div class="col-md-6 col-lg-6">
-                <h2 class="enemy-name fight-header">
-                  
-                </h2>
+                <h2 class="enemy-name fight-header"></h2>
                    <div id="enemy">
 
                     </div>
@@ -130,8 +130,11 @@
         </div>
     </div><!--END ROW-->
     </div>
-  </div><!--END CONTAINER-->
 
+   <audio controls autoplay >
+  <source src="solemn.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
    <script
   src="http://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
