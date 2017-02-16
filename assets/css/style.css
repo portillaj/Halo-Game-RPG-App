@@ -54,10 +54,6 @@ body {
 	border-radius: 8px;
 }
 
-.enemy-side {
-	margin-left: 70px;
-}
-
 .battle-img {
 	background-color: #23252A; 
 	padding: 10px;
@@ -208,7 +204,34 @@ body {
 	margin-left: 110px;
 }
 
+.attackValue, .hpValue {
+	color: #23A167;
+}
 
+.attackValue2, .hpValue2 {
+	color: #6F23A1;
+}
+
+.player-name, .enemy-name {
+	margin-right: 50px;
+	text-align: center;
+	color: #1F9AEE;
+	font-size: 24px;
+	text-decoration: underline;
+	font-family: 'Merriweather', serif;
+	margin-bottom: 15px;
+}
+
+.enemy-name {
+	margin-right: 50px;
+}
+
+.win-message, .gameOver-message {
+	margin-top: 7px;
+	font-size: 20px;
+	color: #AA0909;
+	margin-left: 7px;
+}
 
 
 

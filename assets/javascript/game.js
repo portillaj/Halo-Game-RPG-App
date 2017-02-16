@@ -5,70 +5,41 @@ var selected = false;
 var enemiesFought = [];
 var isEmpty = false;
 
-	var card = masterChief.getHtml();
-
 	var masterChief = {
-		name: "masterChief",
-		hp: 180,
-		attackPower: 7,
+		name: "MasterChief",
+		hp: 220,
+		attackPower: 18,
 		increasedAttack: 7,
-		counterAttack: 10,
 		gifPath: "assets/images/master-chief.gif",
-		getHtml: function(){
-			var rank = $("<span>")
-			.append($("<p>CSR<p>"))
-			.addClass("rank");
-			
-			var h2 = $('<h2>')
-			.append(rank)
-			.attr("id", "characterHp")
-			.text(this.name);
-			
-			var img = $("<img>")
-			.attr("src", this.gifPath)
-			.attr("data-obj", this.name)
-			.addClass("character");
-			
-
-
-			var outputDiv = $("<div>")
-			.addClass("col-md-3 col-lg-3 player-card");
-			outputDiv.append(img);
-			outputDiv.append(h2);
-
-			return outputDiv; 
-		}
 	};
 
 	var cortana = {
-		name: "cortana",
+		name: "Cortana",
 		hp: 300,
-		attackPower: 3,
+		attackPower: 8,
 		increasedAttack: 3,
-		counterAttack: 35,
 		gifPath: "assets/images/cortana.gif"
 	};
 
 	var elite = {
-		name: "elite",
+		name: "Elite",
 		hp: 220,
-		attackPower: 5,
+		attackPower: 17,
 		increasedAttack: 5,
-		counterAttack: 15,
 		gifPath: "assets/images/elite.gif"
 	};
 
 	var sentinel = {
-		name: "sentinel",
+		name: "Sentinel",
 		hp: 135,
-		attackPower: 4,
+		attackPower: 20,
 		increasedAttack: 7,
-		counterAttack: 20,
 		gifPath: "assets/images/sentinel.gif"
 	};
 
 var attackButton = $(".attack");
 attackButton.hide();
+$(".restart-button").hide();
 
 	//when character is selected, the character to battle arena
 	$(".character").on("click", function(){
@@ -108,6 +79,11 @@ $(".attack").on("click", function(){
 		if(selectedCharacter.hp <= 0) {
 			$(".win-message").text("You Lose!");
 			$(".gameOver-message").text("Game Over!");
+			death.play();
+			$('#player').empty();
+			attackButton.unbind("click");
+			$(".restart-button").show();
+			resetGame();
 		}
 
 		if(selectedCharacter2.hp <= 0){
@@ -117,15 +93,20 @@ $(".attack").on("click", function(){
 			$(".my-enemy").hide();
 
 			if(enemiesFought.length == 3){
-				//death.play();
+				death.play();
 				$(".win-message").text("You Win!");
 				$(".gameOver-message").text("Game Over!");
+				attackButton.unbind("click");
+				$(".restart-button").show();
+				resetGame();
 			}
 		}
 	}else{
 		alert("Pick another Character to fight");
 	}
 });//end attack click function
+
+
 
 function playerStats() {
 	selectedCharacter.hp = selectedCharacter.hp - selectedCharacter2.attackPower;
@@ -137,5 +118,11 @@ function playerStats() {
 function enemyStats() {
 	selectedCharacter2.hp = selectedCharacter2.hp - selectedCharacter.attackPower;
 	$(".hpValue2").html(selectedCharacter2.hp);
+}
+
+function resetGame() {
+	$(".restart-button").on("click", function() {
+		location.reload();
+	});
 }
 
