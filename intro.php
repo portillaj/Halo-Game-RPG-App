@@ -1,3 +1,3 @@
 <?php
-	include_once("intro.html");
+	include_once("Intro.html");
 ?>
