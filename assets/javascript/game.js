@@ -2,6 +2,8 @@ $(document).ready(function(){
 	//variables
 	var death = new Audio('assets/javascript/gameover.mp3');
 	var double = new Audio('assets/javascript/doublekill.mp3');
+	var hover = new Audio('assets/javascript/hover.mp3');
+	var select = new Audio('assets/javascript/select.mp3');
 	var selectedCharacter;
 	var selectedCharacter2;
 	var selected = false;
@@ -46,8 +48,13 @@ $(document).ready(function(){
 	attackButton.hide();//hide attack button until characters selected
 	$(".restart-button").hide(); //hide restart button until game ends
 
+	$(".character").on("mouseenter", function(){
+		hover.play();
+	});
+
 		//when character is selected, the character to battle arena
 		$(".character").on("click", function(){
+			select.play();
 				//store object into selected character variable	
 			if(selected == false){ //if player is not selected run this code 
 				selectedCharacter = eval($(this).data("obj"));
@@ -156,5 +163,5 @@ $(document).ready(function(){
 	function enemyDisplay() {
 		$(".display2").html(selectedCharacter2.attackPower);
 	}
-	
+
 });//end of document ready function
